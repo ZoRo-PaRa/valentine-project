@@ -123,3 +123,21 @@ function stopHeartbeatSound() {
   clearInterval(heartbeatInterval);
   if (audioCtx) audioCtx.close();
 }
+
+window.addEventListener("pageshow", function (event) {
+  // If page is restored from back/forward cache
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+
+function resetIndexPage() {
+  const loader = document.getElementById("heartLoader");
+  if (loader) loader.classList.add("hidden");
+
+  document.querySelectorAll("button").forEach(btn => {
+    btn.disabled = false;
+  });
+}
+
+window.addEventListener("load", resetIndexPage);
