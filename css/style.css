@@ -245,3 +245,47 @@ button:hover {
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
+@media (max-width: 480px) {
+
+  /* Increase overall visual density */
+  body {
+    font-size: 16px;
+  }
+
+  /* Center cards feel closer */
+  .question-box,
+  .letter {
+    transform: scale(1.08);
+  }
+
+  /* Reduce excessive empty space */
+  .container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* Headings slightly larger */
+  .name {
+    font-size: 28px;
+  }
+
+  .question-box h1 {
+    font-size: 22px;
+  }
+
+  /* Buttons slightly bigger */
+  button,
+  .yes-btn,
+  .no-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  /* Gallery images look closer */
+  .gallery img {
+    max-width: 240px;
+    height: 300px;
+  }
+}
+
